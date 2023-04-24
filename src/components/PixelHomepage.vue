@@ -1,72 +1,21 @@
 <script setup>
-    import WidgetsForUIUX from './sub_components/WidgetsForUIUX.vue'
+    // import WidgetsForUIUX from './sub_components/WidgetsForUIUX.vue'
+    import NavigationMenu from './sub_components/NavigationMenu.vue'
+    import LogoIcon from './sub_components/LogoIcon.vue'
+    
+    import firstUIWidget from './sub_components/UIUX/1-UIUXwidget.vue'
+
 </script>
 
 <template>
 
-<div class="desktop-size">
+<NavigationMenu />
+<div class="desktop-size"
+   >
     <!-- MENU -->
-    <a-menu mode="horizontal"
-            style="display: flex;
-                padding: 12px;
-                font-size: 16px;
-                justify-content: space-between;
-           ">
-    
-            <!--right aligned-->
-            <div style="display:flex">
-              <a-menu-item key="mail" >
-                <template #icon> <mail-outlined /> </template>
-                  Homepage
-              </a-menu-item>
-    
-              <a-menu-item key="contact" >
-                <template #icon> <mail-outlined /> </template>
-                  Contact Page
-              </a-menu-item>
-            </div>
-    
-    
-            <!-- left aligned -->
-            <div style="display:flex">
-              <a-menu-item key="none" disabled>
-                <template #icon>
-                    <appstore-outlined />
-                  </template>
-                  UI UX Development
-                  
-                </a-menu-item>
-    
-                <a-menu-item key="mail" >
-                  <template #icon> <mail-outlined /> </template>
-                  3D & Development
-                </a-menu-item>
-    
-                <a-sub-menu key="sub1">
-                  <template #title>
-                    Marketing Graphic Materials
-                  </template>
-                  <a-menu-item-group title="Item 1"
-                        >
-                    <a-menu-item key="setting:1">Option 1</a-menu-item>
-                    <a-menu-item key="setting:2">Option 2</a-menu-item>
-                  </a-menu-item-group>
-                  <a-menu-item-group title="Item 2">
-                    <a-menu-item key="setting:3">Option 3</a-menu-item>
-                    <a-menu-item key="setting:4">Option 4</a-menu-item>
-                  </a-menu-item-group>
-                </a-sub-menu>
-    
-    
-                <a-menu-item key="alipay">
-                  <a href="https://antdv.com" target="_blank" rel="noopener noreferrer">
-                    Ant Design
-                  </a>
-                </a-menu-item>
-            </div>
-      </a-menu>
 
-      <div>
+    <div>
+    
     <!-- CAROUSEL -->
     <!-- container for text content -->
         <div style="width: 100%;
@@ -78,14 +27,16 @@
     
     
           <a-row style="width: 100%; padding: 0px 200px;">
-    
+    <!-- WIDGET'S COLUMN -->
               <a-col :span="14">col-12
-                <WidgetsForUIUX />
+                <firstUIWidget />
               </a-col>
+
+    <!-- HEADLINE TEXT COLUMN--->
               <a-col :span="10"
                     style="padding-left: 30px;">
                 
-                <a-avatar :size="55" style="margin-bottom: 20px;">U</a-avatar>
+                <LogoIcon/>
     <!-- HEADLINE-->
                 <h1 class="headlinetext mulish-white"
                     style="margin-bottom: 15px;"> 
@@ -137,11 +88,14 @@
       .headlinetext {
         font-size: 45px;
         font-weight: 800;
+        color: #1d1d1d;
       }
     
       .sublinetext {
-        font-size: 35px;
+        font-size: 28px;
         font-weight: 500;
+        color: #1d1d1d;
+
       }
     
     
@@ -172,7 +126,7 @@
         text-align: center;
         height: 700px;
         line-height: 160px;
-        background: #364d79;
+        background: #E7EEFC;
         overflow: hidden;
         height: 100vh;
       }
