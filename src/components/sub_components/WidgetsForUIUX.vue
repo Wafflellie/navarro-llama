@@ -5,8 +5,11 @@
 
 <!-- FOR COPY PASTE      -->
     <a-col :span="12">    
+
             <p class="f-500" style="color: #989898"> Give a greeting! </p>
-            <div class="input-wrapper">
+ 
+            <!-- INPUT COPY FIELD -->
+            <div class="input-wrapper-widget">
                 <input 
                     class="copy-field"
                     type="text" 
@@ -14,14 +17,66 @@
                     value="samplegmail.com" />
                 
                 <button @click="copyToClipboard"
-                    class="copy-button" 
-                    >
+                    class="copy-button" >
                     <img src="../../assets/images/clipboard-icon-svg.svg" alt="Icon"/>
                 </button>
+
             </div>
 
-            <div>
-                dahsdu
+            <div class="skill-toggle-widget">
+                <p style="font-weight: 600; font-size: 18px;"> Possible skillset </p>
+                
+                <div style="border-top: 1px solid #e0e0e0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 15px 0 0 0;">
+                </div>
+
+            <div class="scrollable">
+                <div class="toggle-div">
+                    <label class="switch-label" for="switch">
+                        Skill name 
+                    </label>
+                    <a-switch v-model:checked="checked1" />
+                </div>
+
+                <div class="toggle-div">
+                    <label class="switch-label" for="switch">
+                        Skill name 
+                    </label>
+                    <a-switch v-model:checked="checked1" />
+                </div>
+
+                <div class="toggle-div">
+                    <label class="switch-label" for="switch">
+                        Skill name 
+                    </label>
+                    <a-switch v-model:checked="checked1" />
+                </div>
+
+                <div class="toggle-div">
+                    <label class="switch-label" for="switch">
+                        Skill name 
+                    </label>
+                    <a-switch v-model:checked="checked1" />
+                </div>
+
+                <div class="toggle-div">
+                    <label class="switch-label" for="switch">
+                        Skill name 
+                    </label>
+                    <a-switch v-model:checked="checked1" />
+                </div>
+
+                <div class="toggle-div">
+                    <label class="switch-label" for="switch">
+                        Skill name 
+                    </label>
+                    <a-switch v-model:checked="checked1" />
+                </div>
+            </div>
+                
             </div>
 
             
@@ -78,32 +133,36 @@
 
 <script>
     import '@/assets/main.css';
+    import { defineComponent, reactive, toRefs } from 'vue';
 
-    export default {
-        data() {
-            return {
-                count: 0
-            }
-        },
+    export default defineComponent({
+        setup() {
+            const state = reactive({
+            checked1: true,
+            checked2: false,
+            });
+                return { ...toRefs(state) };
+            },
 
-        methods: {
+            methods: {
         
-        copyToClipboard() {
-            //Get textfield
-            var copyText = document.getElementById('copy-input');
-            //Select the textfield
-            copyText.select();
-            
-            //Copy the text inside the text field
-            navigator.clipboard.writeText(copyText.value);
-
-            //alert
-            alert("Copied!");
+            copyToClipboard() {
+                //Get textfield
+                var copyText = document.getElementById('copy-input');
+                //Select the textfield
+                copyText.select();
+                
+                //Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value);
+    
+                //alert
+                // alert("Copied!");
+                }
+    
             }
 
-        }
+        });
 
-    }
 </script>
 
 
@@ -114,46 +173,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
+/* SKILL TOGGLE WIDGET */
+
+/* track style */
+::-webkit-scrollbar-track {
+background-color: #eeeeee;
+}
+
+/* handle style */
+::-webkit-scrollbar-thumb {
+  background: #dadada;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c0c0c0;
+}
+
+
+        .scrollable {
+        height: 150px; /* set a fixed height for the div */
+        overflow: auto; /* enable scrolling */
+        }
+
+        .toggle-div {
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between;
+        margin-bottom: 15px;
+        margin-right: 15px;
+        }
+
+        .skill-toggle-widget {
+        background-color: white;
+        border-radius: 20px;
+
+        height: auto;
+        width: auto;
+        margin: 0 30px 30px 0;
+        padding: 20px;
+        }
+
+        .switch-label {
+            font-family: 'Inter';
+            font-weight: 500;
+            font-size: 15px;
+            color: #989898;
+        }
+
+
 /* FOR COPY PASTE */
+        .input-wrapper-widget {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        width: auto;
+        margin: 0 30px 30px 0;
+        }
 
-.input-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  width: auto;
-  margin: 0 30px 30px 0;
-}
+        .copy-field {
+            height: 50px;
+            width: 100%;
+            background: #d9d9d956;;
+            border-radius: 10px;;
+            border-style: solid;
+            border-color: #d9d9d9;
+            font-size: 14px;
+            padding-left: 15px;
+        }
 
-.copy-field {
-    height: 50px;
-    width: 100%;
-    background: #d9d9d956;;
-    border-radius: 10px;;
-    border-style: solid;
-    border-color: #d9d9d9;
-    font-size: 14px;
-    padding-left: 15px;
-}
+        .copy-button {
+        position: absolute;
+        align-self: center;
+        margin-right: 10px;
+        background-color: white;
 
-.copy-button {
-  position: absolute;
-  align-self: center;
-  margin-right: 10px;
-  background-color: white;
+            border-style: none;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
 
-    border-style: none;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
+            transition: box-shadow 0.3s ease-in-out;
+        }
 
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.copy-button:hover {
-    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.1);}
+        .copy-button:hover {
+            box-shadow: 0 8px 10px 0 rgba(0,0,0,0.1);
+        }
 
 /* CSS FOR POP UP MODAL */
 

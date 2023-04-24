@@ -1,7 +1,9 @@
 <script setup>
-    import WidgetsForUIUX from './sub_components/WidgetsForUIUX.vue'
+    // import WidgetsForUIUX from './sub_components/WidgetsForUIUX.vue'
     import NavigationMenu from './sub_components/NavigationMenu.vue'
     import LogoIcon from './sub_components/LogoIcon.vue'
+    
+    import firstUIWidget from './sub_components/UIUX/1-UIUXwidget.vue'
 
 </script>
 
@@ -25,10 +27,12 @@
     
     
           <a-row style="width: 100%; padding: 0px 200px;">
-    
+    <!-- WIDGET'S COLUMN -->
               <a-col :span="14">col-12
-                <WidgetsForUIUX />
+                <firstUIWidget />
               </a-col>
+
+    <!-- HEADLINE TEXT COLUMN--->
               <a-col :span="10"
                     style="padding-left: 30px;">
                 
