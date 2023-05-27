@@ -1,40 +1,47 @@
 <script setup>
     // import WidgetsForUIUX from './sub_components/WidgetsForUIUX.vue'
-    import NavigationMenu from './sub_components/NavigationMenu.vue'
+    import NavigationMenu from './sub_components/NewNavigationMenu.vue'
     import LogoIcon from './sub_components/LogoIcon.vue'
-    
     import firstUIWidget from './sub_components/UIUX/1-UIUXwidget.vue'
 
 </script>
 
 <template>
 
-<NavigationMenu />
-<div class="desktop-size"
-   >
+<div class="desktop-size">
     <!-- MENU -->
+    <nav style="position: sticky; top: 0; z-index: 100;">
+      <NavigationMenu />
+    </nav>
 
     <div>
-    
     <!-- CAROUSEL -->
     <!-- container for text content -->
         <div style="width: 100%;
                     display: flex;
                     row-gap: 2rem;
                     z-index: 5;
-                    position: absolute;
-                    margin-top: 15%;">
+                    position: absolute;">
+
     
     
           <a-row style="width: 100%; padding: 0px 200px;">
     <!-- WIDGET'S COLUMN -->
-              <a-col :span="14">col-12
+              <a-col :span="13">
                 <firstUIWidget />
+
+                <!-- VERTICAL LINE -->
+                <div style="height: 105%;  transform: translate(-40px, -800px); border-right: 1px solid #00000011;"> </div>
+              
               </a-col>
 
+
+
+
     <!-- HEADLINE TEXT COLUMN--->
-              <a-col :span="10"
-                    style="padding-left: 30px;">
+              <a-col :span="11"
+                    style="padding-left: 30px; align-self: center;"
+                    >
                 
                 <LogoIcon/>
     <!-- HEADLINE-->
@@ -104,7 +111,7 @@
         font-family: 'Mulish';
         margin-top: 30px;
         width: auto;
-        height: 55px;
+        height: 50px;
         padding: 0 25px;
         font-size: 17px;
         font-weight: 500;

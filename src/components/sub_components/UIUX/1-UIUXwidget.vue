@@ -1,10 +1,11 @@
 <template> 
 
-
+        
         <a-row style="display: flex;
                     row-gap: 0px;
                     align-content: flex-end;
-                    align-items: flex-end;">
+                    align-items: flex-end;
+                    margin-top: 50px;">
         
         <!-- FOR COPY PASTE      -->
             <a-col :span="12">    
@@ -38,46 +39,18 @@
         
                     <div class="scrollable">
                         <div class="toggle-div">
-                            <label class="switch-label" for="switch">
-                                Skill name 
-                            </label>
-                            <a-switch v-model:checked="checked1" />
+
+                            <div v-for="(skill, index) in skillSet" :key="index"
+                                style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 5px;">
+                                <label class="switch-label" for="switch">
+                                    {{skill.skill}}
+                                </label>
+<!-- @change handlefunction is added   -->
+                                <a-switch :checked="skill.isActive" @change="handleChangeSkill(index)" />
+                            </div>
                         </div>
-        
-                        <div class="toggle-div">
-                            <label class="switch-label" for="switch">
-                                Skill name 
-                            </label>
-                            <a-switch v-model:checked="checked1" />
-                        </div>
-        
-                        <div class="toggle-div">
-                            <label class="switch-label" for="switch">
-                                Skill name 
-                            </label>
-                            <a-switch v-model:checked="checked1" />
-                        </div>
-        
-                        <div class="toggle-div">
-                            <label class="switch-label" for="switch">
-                                Skill name 
-                            </label>
-                            <a-switch v-model:checked="checked1" />
-                        </div>
-        
-                        <div class="toggle-div">
-                            <label class="switch-label" for="switch">
-                                Skill name 
-                            </label>
-                            <a-switch v-model:checked="checked1" />
-                        </div>
-        
-                        <div class="toggle-div">
-                            <label class="switch-label" for="switch">
-                                Skill name 
-                            </label>
-                            <a-switch v-model:checked="checked1" />
-                        </div>
+  
+                  
                     </div>
                         
                     </div>
@@ -90,7 +63,7 @@
             <a-col :span="12">
                 <div class="pop-out-widget"> 
                     <div style="background: linear-gradient(90deg, rgba(102,204,255,1) 0%, rgba(0,255,83,1) 100%); 
-                                height: 175px;
+                                height: 145px;
                                 border-radius: 15px 15px 0px 0px;">
                     </div>
         
@@ -140,7 +113,7 @@
         <a-row style="margin-top: 30px;">
 
     <!-- SOCIAL ICON MODAL -->
-            <a-col :span="3" >
+            <a-col :span="2.7" >
                 <div class="social-icon-widget" > 
                 <!-- linkedin -->
                     <a href="https://www.linkedin.com" target="_blank">
@@ -163,8 +136,9 @@
             </a-col>
 
     <!-- STEPPER AND RECEIPT WIDGET -->
-            <a-col :span="17">
-                
+            <a-col :span="18">
+
+    <!-- STEPS WIDGET             -->
                 <div class="stepper-widget">
 
                     <div id="app">
@@ -189,11 +163,11 @@
                             </div>
 
     <!-- line's div -->
-                            <div style="position: absolute; display: flex; z-index: 1; top: 11px; width: 100%; justify-content: space-between; padding: 0px 105px 0px 33px;">
+                            <div style="position: absolute; display: flex; z-index: 1; top: 11px; width: 100%; justify-content: space-between; padding: 0px 75px 0px 45px;">
                                         
                                 <div v-for="(step, index) in statusLine" :key="index">
                                     <div class="line" :class="step.status" 
-                                            style="width: 100px; height: 5px; border-radius: 10px; margin-left: 10px;" >
+                                            style="width: 95px; height: 4px; border-radius: 15px; margin-right: 0px;" >
                                     </div>
                                 </div>
                             </div>
@@ -208,9 +182,56 @@
 
                 </div>
 
+                
+    <!-- RECEIPT WIDGET -->
+                <div class="receipt-widget">
+                    <a-row>
+                        <a-col :span="9" style="padding: 20px;">
+                            <p class="f-98"> Includes features </p>
+                            <div style="display: flex;" v-for="skill in activeSkills" :key="skill.skill">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <p class="f-51" style="margin-left: 10px;"> {{ skill.skill }} </p>
+                            </div>
+                        </a-col>
+
+                        <a-col :span="15" style="height: 200px; display: flex;">
+<!-- broken line svg-->
+                        <svg width="1" height="100%" viewBox="0 0 1 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.5" y1="2.18557e-08" x2="0.49999" y2="220" stroke="#E0E0E0" stroke-dasharray="7 7"/>
+                        </svg>
+                        
+                        <div style="padding: 30px; width: 100%;">
+                            <h3> Order confirmation </h3>
+                            <a-row class="f-98 f-200" style="margin-bottom: 5px;">
+                                <a-col :span="9"> <span>Product</span> </a-col>
+                                <a-col :span="7"> <span>Quantity</span> </a-col>
+                                <a-col :span="8"> <span>Amount</span> </a-col>
+                            </a-row>
+                            <hr>
+
+                            <a-row class="f-24 f-500" style="margin-top: 5px;">
+                                <a-col :span="9"> <p style="font-weight: 500;">LAGN Services</p> </a-col>
+                                <a-col :span="7">
+                                    <div style="display: flex;">
+                                        <button @click="decrementNumField">-</button>
+                                        <input type="number" v-model="numberInput"
+                                               style="width: 35px;
+                                                      display: flex;
+                                                      text-align: center;">
+                                        <button @click="incrementNumField">+</button>
+                                    </div>
+                                </a-col>
+                                <a-col :span="8"> <p style="font-weight: 700;">$ 1,234.00</p> </a-col>
+                            </a-row>
+
+
+                        </div>
+
+                        </a-col>
+                    </a-row>
+                </div>
             </a-col>
         </a-row>
-        
     
     </template>
     
@@ -232,13 +253,26 @@
 // DATA
             data() {
                 return {
+
+                    numberInput: 1,
+
                     //step progress data
                     steps: [
-                        { text: 'Step 1', status: 'completed', description: 'Lorem Ipsum 1' },
-                        { text: 'Step 2', status: 'cancelled', description: 'Lorem Ipsum 2' },
-                        { text: 'Step 3', status: 'in-progress', description: 'Lorem Ipum 3' },
-                        { text: 'Step 4', status: 'todo', description: 'Lorem Ipsum 4' }
-                    ]
+                        { text: 'Step 1', status: 'completed', description: 'Visit Llama’s website' },
+                        { text: 'Step 2', status: 'cancelled', description: 'Contact the designer' },
+                        { text: 'Step 3', status: 'in-progress', description: 'Explore skill pages' },
+                        { text: 'Done!', status: 'todo', description: 'All good!' }
+                           ],
+
+                    skillSet: [
+                        { skill: 'UI UX Design', isActive: true },
+                        { skill: '3D & Game Asset Design', isActive: true },
+                        { skill: 'Google Banner Ads', isActive: false },
+                        { skill: 'Graphic Design', isActive: false },
+                        { skill: 'Branding Design', isActive: false },
+                        { skill: 'Web and Mobile Design', isActive: true },
+
+                        ]                    
                 };
             },
 
@@ -246,13 +280,17 @@
             computed: {
                 statusLine() {
                     return this.steps.slice(0, 3);
+                },
+
+                activeSkills() {
+                     return this.skillSet.filter(skill => skill.isActive);
                 }
             },
             
 
 
             methods: {
-            
+
                 copyToClipboard() {
                     //Get textfield
                     var copyText = document.getElementById('copy-input');
@@ -274,8 +312,22 @@
                         'in-progress': step.status === 'in-progress',
                         'todo': step.status === 'todo',
                         'cancelled': step.status === 'cancelled'
-
                     };
+                },
+
+                handleChangeSkill(index) {
+                // Update isActive for the skill at the specified index
+                this.skillSet[index].isActive = !this.skillSet[index].isActive;
+                },
+
+                incrementNumField() {
+                //add value to the number input field    
+                    this.numberInput++;
+                },
+
+                decrementNumField() {
+                //minus value to the number input field
+                    this.numberInput--;
                 }
 
         
@@ -287,12 +339,26 @@
     </script>
     
     
-    
-    
     <style>
     
     @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+
+    /* UP AND DOWN BUTTON REMOVABLE INPUT NUM FIELD */
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0;  }
+
+/* RECEIPT WIDGET */
+    .receipt-widget {
+
+        margin-top: 30px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 0px 10px 0 rgba(0,0,0,0.1);
+    }
 
 /* STEPPER WIDGET */
     .stepper-widget {
@@ -345,8 +411,16 @@
 
     .step-text {
     margin-top: 10px;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Inter';
+    color: #828282;
+    }
+
+    .step-subtext {
+        font-family: 'Inter';
+        font-size: 11px;
+        color: #C6C6C6;
     }
 /* STEP COLOR */
     .step.completed .number {
@@ -431,9 +505,9 @@
     
             .toggle-div {
             display: flex; 
-            align-items: center; 
-            justify-content: space-between;
-            margin-bottom: 15px;
+            flex-direction: column;
+            align-items: flex-start; 
+            /* margin-bottom: 15px; */
             margin-right: 15px;
             }
     

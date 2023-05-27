@@ -2,19 +2,9 @@
 
 
 /* FONT FAMILIY IMPORT */
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-/* TAILS WIND  */
-/* #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-} */
 
 a,
 .green {
@@ -23,73 +13,59 @@ a,
   transition: 0.4s;
 }
 
-/* @media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-} */
-
-/* @media (min-width: 1440px) {
-  .desktop-size {
-    max-width: 1440px;
-    margin: auto;
-
-  }
-
-  /* #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  } */
-
 
 /* STANDARD BUTTON*/
 button {
   cursor: pointer;
 }
 
-input {
-  font-family: 'Inter' !important;
-}
+/* STANDARD INPUT */
+input {  font-family: 'Inter' !important; }
 
-p {
+/* STANDARD BUTTON */
+.small-button {
+  height: 45px;
+  padding: 0 22px;
+  font-size: 14px;
+  border: none;
   font-family: 'Inter';
-}
-
-.f-500 {
   font-weight: 500;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
 }
 
-  .small-button {
-    height: 45px;
-    padding: 0 22px;
-    font-size: 14px;
-    border: none;
-    font-family: 'Inter';
-    font-weight: 500;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
-  }
+.blue-button {
+  color: white;
+  background: linear-gradient(90deg, #2f80ec, transparent) #2f80ec;    
+  transition: background-color 1s;
+}
 
-  .medium-button {
-    height: 50px;
-    padding: 0 30px;
-    font-size: 17px;
-    border: none;
-  }
+.blue-button:hover{  background-color: #092c4c; }
 
-  .blue-button {
-    color: white;
-    background: linear-gradient(90deg, #2f80ec, transparent) #2f80ec;    
-    transition: background-color 1s;
-  }
 
-  .blue-button:hover{
-    background-color: #092c4c;
-  }
- 
+.medium-button {
+  height: 50px;
+  padding: 0 30px;
+  font-size: 17px;
+  border: none;
+}
+
+
+/* STANDARD TEXT */
+p li h1 h2 h3 h4 h5{  font-family: 'Inter';}
+
+/* FONT WEIGHT */
+.f-500 {  font-weight: 500; }
+.f-300 {  font-weight: 300; }
+.f-200 {  font-weight: 200; }
+
+/* FONT COLOR */
+.f-98 { color: #989898;}
+.f-51 { color: #515151;}
+.f-24 { color: #242424;}
+.f-d9 { color: #d9d9d9;}
+
+
 
 /* FONT FAMILY  */
-  dm-sans {
-    font-family: 'DM Sans';
-  }
+  dm-sans {    font-family: 'DM Sans'; }
