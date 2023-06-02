@@ -31,7 +31,7 @@
                 <firstUIWidget />
 
                 <!-- VERTICAL LINE -->
-                <div style="height: 105%;  transform: translate(-40px, -800px); border-right: 1px solid #00000011;"> </div>
+                <div style="height: 105%; border-right: 1px solid #00000011;"> </div>
               
               </a-col>
 
