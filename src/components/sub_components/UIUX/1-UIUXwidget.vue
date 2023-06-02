@@ -46,6 +46,7 @@
                                     {{skill.skill}}
                                 </label>
 <!-- @change handlefunction is added   -->
+
                                 <a-switch :checked="skill.isActive" @change="handleChangeSkill(index)" />
                             </div>
                         </div>
