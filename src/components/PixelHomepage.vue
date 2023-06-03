@@ -1,9 +1,9 @@
 <script setup>
     // import WidgetsForUIUX from './sub_components/WidgetsForUIUX.vue'
     import NavigationMenu from './sub_components/NewNavigationMenu.vue'
-    import LogoIcon from './sub_components/LogoIcon.vue'
-    import firstUIWidget from './sub_components/UIUX/1-UIUXwidget.vue'
 
+    import UIUXWidget from './sub_components/UIUX/1-UIUXwidget.vue'
+    import UIUXContent from './sub_components/UIUX/2-WidgetBannerContent.vue'
 </script>
 
 <template>
@@ -28,32 +28,15 @@
           <a-row style="width: 100%; padding: 0px 200px;">
     <!-- WIDGET'S COLUMN -->
               <a-col :span="13">
-                <firstUIWidget />
-
-                <!-- VERTICAL LINE -->
-                <div style="height: 105%; border-right: 1px solid #00000011;"> </div>
-              
+                <UIUXWidget />              
               </a-col>
 
 
 
 
     <!-- HEADLINE TEXT COLUMN--->
-              <a-col :span="11"
-                    style="padding-left: 30px; align-self: center;"
-                    >
-                
-                <LogoIcon/>
-    <!-- HEADLINE-->
-                <h1 class="headlinetext mulish-white"
-                    style="margin-bottom: 15px;"> 
-                    From Pixels to Emotions</h1>
-    <!-- SUBLINE-->
-                <h4 class="sublinetext mulish-white"> 
-                  Elevate Your Digital Products And Create Engaging Digital Products </h4>
-    
-    
-                <button class="primary-button"> CUSTOM BUTTON </button>
+              <a-col :span="11" style="padding-left: 30px; align-self: center;">
+                <UIUXContent/>
               </a-col>
           </a-row>
       </div>
@@ -87,39 +70,10 @@
     
       /* homepage banner */
     
-      .mulish-white {
-        font-family: 'Mulish';
-        color: white;
-        line-height: normal;
-      }
-      .headlinetext {
-        font-size: 45px;
-        font-weight: 800;
-        color: #1d1d1d;
-      }
-    
-      .sublinetext {
-        font-size: 28px;
-        font-weight: 500;
-        color: #1d1d1d;
 
-      }
     
     
-      .primary-button
-      {
-        font-family: 'Mulish';
-        margin-top: 30px;
-        width: auto;
-        height: 50px;
-        padding: 0 25px;
-        font-size: 17px;
-        font-weight: 500;
-        border-radius: 50px;
-        border: none;
-        color: white;
-        background: linear-gradient(90deg, rgba(255,102,194,1) 0%, rgba(255,87,0,1) 100%, rgba(255,87,0,1) 150%);
-      }
+
     
     
     

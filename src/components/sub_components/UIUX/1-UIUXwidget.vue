@@ -46,6 +46,7 @@
                                     {{skill.skill}}
                                 </label>
 <!-- @change handlefunction is added   -->
+
                                 <a-switch :checked="skill.isActive" @change="handleChangeSkill(index)" />
                             </div>
                         </div>
@@ -62,7 +63,7 @@
         <!-- MODAL FOR UI UX -->
             <a-col :span="12">
                 <div class="pop-out-widget"> 
-                    <div style="background: linear-gradient(90deg, rgba(102,204,255,1) 0%, rgba(0,255,83,1) 100%); 
+                    <div style="background: linear-gradient(90deg, rgba(9,44,76,1) 0%, rgba(70,129,137,1) 100%);
                                 height: 145px;
                                 border-radius: 15px 15px 0px 0px;">
                     </div>
@@ -99,7 +100,7 @@
         
                             </div>
         
-                            <button class=" blue-button small-button"> Visit </button>
+                            <button class="blue-button small-button"> Visit </button>
         
                         </div>
         
