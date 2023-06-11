@@ -14,12 +14,12 @@ a,
 }
 
 
-/* STANDARD BUTTON*/
+/* STANDARD BUTTON ------------------------------------------------------*/
 button {
   cursor: pointer;
 }
 
-/* STANDARD INPUT */
+/* STANDARD INPUT -------------------------------------------------------*/
 input {  font-family: 'Inter' !important; }
 
 
@@ -40,7 +40,8 @@ input {  font-family: 'Inter' !important; }
 }
 
 
-/* STANDARD BUTTON */
+/* STANDARD BUTTON -----------------------------------------------------------*/
+
 .small-button {
   height: 42px;
   padding: 0 22px;
@@ -64,16 +65,20 @@ input {  font-family: 'Inter' !important; }
 .primary-button
 {
   font-family: 'Mulish';
+  font-size: 17px;
+
   margin-top: 30px;
   width: auto;
   height: 50px;
   padding: 0 30px;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 18px;
   border-radius: 50px;
   border: none;
+  letter-spacing: 1px;
 }
 
+
+/* BUTTON DESIGN------------------------------------------------------------*/
 
 .blue-button {
   color: white;
@@ -87,17 +92,60 @@ input {  font-family: 'Inter' !important; }
 .pink-button {
   color: white;
   background: linear-gradient(90deg, #F3994B, transparent) #F3994B;
-  transition: background-color .4s;
+  transition: background-color .3s;
 }
 
 .pink-button:hover {  background-color: #FA438B;}
 
 
+/* Homepage button ---------------------------------------------------------------*/
 
-/* STANDARD TEXT */
+.pink-button-home {
+  font-family: 'Mulish';
+  font-size: 18px;
+  font-weight: 500;
+  height: 65px;
+  width: auto;
+  padding: 0px 40px;
+  border-radius: 50px;
+  border: none;
+  letter-spacing: 1px;
+
+  color: white;
+  background: linear-gradient(90deg, #F3994B, transparent) #F3994B;
+  box-shadow: 0px 12px 38px -10px rgba(255, 170, 0, 0.65);
+  transition: background-color .3s;
+}
+
+.pink-button-home:hover {  background-color: #FA438B;}
+
+
+.no-line-button {
+  font-family: 'Mulish';
+  font-size: 18px;
+  font-weight: 600;
+  height: 65px;
+
+  width: auto;
+  padding: 0px 40px;
+  border-radius: 50px;
+  border: none;
+  letter-spacing: 1px;
+
+  color: #ff8d29;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #f3994b00;
+
+  transition: border .3s; }
+
+.no-line-button:hover {
+  border: 2px solid #ff8d29;
+}
+
+/* STANDARD TEXT ------------------------------------------------*/
 p li h1 h2 h3 h4 h5 span{  font-family: 'Inter';}
 
-/* FONT WEIGHT */
+/* FONT WEIGHT -------------------------------------------------*/
 .f-500 {  font-weight: 500; }
 .f-300 {  font-weight: 300; }
 .f-200 {  font-weight: 200; }
@@ -109,6 +157,10 @@ p li h1 h2 h3 h4 h5 span{  font-family: 'Inter';}
 .f-d9 { color: #d9d9d9;}
 .f-orange {color: #F49A4C;}
 
+/* ANT DESIGN */
+.ant-menu-title-content {
+  font-family: 'Inter';
+}
 
 
 /* FONT FAMILY  */
