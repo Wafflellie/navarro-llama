@@ -17,7 +17,7 @@
             <router-link to="/navarro-llama/uiux/" exact>
             <template #icon>
             </template>
-            UX / UI Development     
+            UX / UI Design & Development
             </router-link>   
         </a-menu-item>
 
