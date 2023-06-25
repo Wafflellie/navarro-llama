@@ -10,7 +10,7 @@
         <!-- FOR COPY PASTE      -->
             <a-col :span="12">    
         
-                    <p class="f-500" style="color: #989898"> Give a greeting! </p>
+                    <p class="f-500" style="color: #989898"> Grab a copy of my email address! </p>
         
                     <!-- INPUT COPY FIELD -->
                     <div class="input-wrapper-widget">
@@ -18,7 +18,7 @@
                             class="copy-field"
                             type="text" 
                             id="copy-input" 
-                            value="samplegmail.com" />
+                            value="pixelliellama@gmail.com" />
                         
                         <button @click="copyToClipboard"
                             class="copy-button" >
@@ -64,7 +64,7 @@
             <a-col :span="12">
                 <div class="pop-out-widget"> 
                     <div style="background: linear-gradient(90deg, rgba(9,44,76,1) 0%, rgba(70,129,137,1) 100%);
-                                height: 145px;
+                                height: 100px;
                                 border-radius: 15px 15px 0px 0px;">
                     </div>
         
@@ -202,7 +202,7 @@
                         </svg>
                         
                         <div style="padding: 30px; width: 100%;">
-                            <h3> Order confirmation </h3>
+                            <p style="font-size: 16px; font-weight: 500;"> Order confirmation </p>
                             <a-row class="f-98 f-200" style="margin-bottom: 5px;">
                                 <a-col :span="9"> <span>Product</span> </a-col>
                                 <a-col :span="7"> <span>Quantity</span> </a-col>
@@ -260,8 +260,8 @@
                     //step progress data
                     steps: [
                         { text: 'Step 1', status: 'completed', description: 'Visit Llama’s website' },
-                        { text: 'Step 2', status: 'cancelled', description: 'Contact the designer' },
-                        { text: 'Step 3', status: 'in-progress', description: 'Explore skill pages' },
+                        { text: 'Step 2', status: 'cancelled', description: 'Explore skill pages' },
+                        { text: 'Step 3', status: 'in-progress', description: 'Contact the designer' },
                         { text: 'Done!', status: 'todo', description: 'All good!' }
                            ],
 
@@ -352,20 +352,21 @@
     -webkit-appearance: none; 
     margin: 0;  }
 
+    p {font-family: 'Inter' !important;}
 /* RECEIPT WIDGET */
     .receipt-widget {
 
         margin-top: 30px;
         background-color: white;
         border-radius: 15px;
-        box-shadow: 0 0px 10px 0 rgba(0,0,0,0.1);
+        box-shadow: 0 0px 40px 0 rgba(0,0,0,0.1);
     }
 
 /* STEPPER WIDGET */
     .stepper-widget {
         border-radius: 15px;
         background-color: white;
-        box-shadow: 0 0px 10px 0 rgba(0,0,0,0.1);
+        box-shadow: 0 0px 40px 0 rgba(0,0,0,0.1);
         padding: 25px;
     }
 
@@ -466,6 +467,8 @@
         width: auto;
         padding: 15px 15px;
         margin-right: 20px;
+        box-shadow: 0 0px 40px 0 rgba(0,0,0,0.1);
+
     }
 
     .social-icon  {
@@ -500,7 +503,7 @@
     
     
             .scrollable {
-            height: 110px; /* set a fixed height for the div */
+            height: 85px; /* set a fixed height for the div */
             overflow: auto; /* enable scrolling */
             }
     
@@ -515,6 +518,8 @@
             .skill-toggle-widget {
             background-color: white;
             border-radius: 20px;
+            box-shadow: 0 0px 40px 0 rgba(0,0,0,0.1);
+
     
             height: auto;
             width: auto;
@@ -579,7 +584,7 @@
         background-color: white;
         border-radius: 20px;
         font-family: 'Mulish';
-        box-shadow: 0 0px 10px 0 rgba(0,0,0,0.1);
+        box-shadow: 0 0px 40px 0 rgba(0,0,0,0.1);
 
     }
     
