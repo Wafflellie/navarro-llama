@@ -10,16 +10,14 @@
                     row-gap: 2rem;
                     z-index: 5;
                     background: linear-gradient(180deg, rgba(231,238,252,1) 0%, rgba(255,255,255,1) 50%, rgba(231,238,252,1) 100%);
-                    padding-top: 40px;">
+                    padding-top: 60px;">
 
-    
     
           <a-row style="width: 100%; padding: 0px 150px 100px 150px;">
     <!-- WIDGET'S COLUMN -->
               <a-col :span="13">
-                <UIUXWidget />              
+                <UIUXWidget />        
               </a-col>
-
 
     <!-- HEADLINE TEXT COLUMN--->
               <a-col :span="11" style="align-self: center;">
@@ -28,6 +26,7 @@
           </a-row>
       </div>
 
+      <div style="height: 50px; background: linear-gradient(90deg, #ffae67 0%, #ff5700 150%);"></div>
       <UIUXProjects />
     
 </template>

@@ -16,10 +16,10 @@
 
 
         <div v-for="(project, index) in projects"> 
-            <a-row type="flex" style="margin-bottom: 50px;">               
+            <a-row type="flex" style="margin-bottom: 100px;">               
 
 
-                <a-col :span="9">
+                <a-col :span="11">
                     <a-row type="flex" style="height: 100%;">
 <!-- BUTTON COLUMN -->
                         <a-col :span="3">
@@ -37,7 +37,7 @@
                             </button>                            
                         </a-col>
 <!-- CONTENT COLUMN -->
-                        <a-col :span="21" style="padding-right: 25px; display: flex; flex-direction: column; justify-content: center;">
+                        <a-col :span="21" style="padding-right: 60px; display: flex; flex-direction: column; justify-content: center;">
                             <p style="font-size: 16px; margin-bottom: 0px;">CREATED</p>
                             <p class="date-created"> {{ project.date_created }} </p>
 
@@ -56,9 +56,9 @@
                 </a-col>
 
 <!-- IMAGE COLUMN -->
-                <a-col :span="15">
-                    <img    :src="project.proj_path"
-                            style="height: 400px; width: 100%;">
+                <a-col :span="13">
+                    <img :src="project.proj_path" alt="Project Image" style="width: 100%; height: auto; fit-content; height: auto;">
+                    <!-- <img src="../UIUX/project-image/go-rice-project.png" alt=""> -->
                 </a-col>
             </a-row>
         </div>
@@ -92,22 +92,42 @@
                         date_created: 'DEC 2020', 
                         title: 'GO RICE PH', 
                         proj_description: 'My First e-commerce website: Designed in Figma and actively participated in development using Vue.js.\n\nOur Vue.js implementation seamlessly integrates dynamic functionalities, ensuring a smooth and intuitive user experience. From the customer-facing pages to the robust administrative features.', 
-                        class_name: 'title-green', 
-                        proj_path: '../../../assets/images/projects-images/go-rice-project.png',
+                        proj_path: '/navarro-llama/src/components/sub_components/UIUX/project-image/go-rice-project.png',
 
+                        class_name: 'title-green', 
                         button_status: 'visit-btn', 
                         button_display: 'VISIT'
                     },
                     {   key: 'proj_2', 
                         date_created: 'JAN 2020', 
-                        title: 'HEALTH MOBILE APP', 
-                        proj_description: 'Lorem ipsum', 
-                        class_name: 'title-blue', 
-                        proj_path: '',
+                        title: 'LEZGO APP', 
+                        proj_description: 'My First e-commerce website: Designed in Figma and actively participated in development using Vue.js. Our Vue.js implementation seamlessly integrates dynamic functionalities, ensuring a smooth and intuitive user experience. From the customer-facing pages to the robust administrative features.', 
+                        proj_path: '/navarro-llama/src/components/sub_components/UIUX/project-image/lezgo-project.png',
 
+                        class_name: 'title-orange', 
                         button_status: 'cs-btn', 
                         button_display: 'COMING SOON'
-                    }
+                    },
+                    {   key: 'proj_3', 
+                        date_created: 'DEC 2020', 
+                        title: 'PHONE ANSWERING AUSTRALIA', 
+                        proj_description: 'My First e-commerce website: Designed in Figma and actively participated in development using Vue.js.\n\nOur Vue.js implementation seamlessly integrates dynamic functionalities, ensuring a smooth and intuitive user experience. From the customer-facing pages to the robust administrative features.', 
+                        proj_path: '/navarro-llama/src/components/sub_components/UIUX/project-image/pas-project.png',
+
+                        class_name: 'title-green', 
+                        button_status: 'visit-btn', 
+                        button_display: 'VISIT'
+                    },
+                    {   key: 'proj_4', 
+                        date_created: 'JAN 2020', 
+                        title: 'HEALTH MOBILE APP', 
+                        proj_description: 'My First e-commerce website: Designed in Figma and actively participated in development using Vue.js. Our Vue.js implementation seamlessly integrates dynamic functionalities, ensuring a smooth and intuitive user experience. From the customer-facing pages to the robust administrative features.', 
+                        proj_path: '/navarro-llama/src/components/sub_components/UIUX/project-image/go-rice-project.png',
+
+                        class_name: 'title-blue', 
+                        button_status: 'cs-btn', 
+                        button_display: 'COMING SOON'
+                    },
                 ]
             };
         },
@@ -117,13 +137,19 @@
         },
 
         methods: {
-
+            getImageStyle(imagePath) {
+                return `background-image: url('${imagePath}')`
+            }
         }
     });
 
 </script>
 
 <style>
+    .image-container {
+        height: 100%;
+        width: 100%;
+    }
 
     .minisectionheader {
         background-image: linear-gradient(64deg, #FA438B 0%, #F3994B 100%);
@@ -135,7 +161,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        background: linear-gradient(180deg, rgb(214 223 245) 0,rgba(231,238,252,1) 50%, rgba(255,255,255,1) 100%);
+        /* background: linear-gradient(180deg, rgb(214 223 245) 0,rgba(231,238,252,1) 50%, rgba(255,255,255,1) 100%); */
     }
 
     .mini-header {
@@ -162,6 +188,10 @@
 
     .title-blue {
         background: linear-gradient(90deg, #0063F8 0%, #00B2FF 100%);
+    }
+
+    .title-orange {
+        background: linear-gradient(90deg, #ff7300 0%, rgb(255, 53, 17) 100%);
     }
 
 /* PROJECTS BUTTON STATUS */

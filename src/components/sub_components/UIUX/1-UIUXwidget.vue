@@ -63,7 +63,7 @@
         <!-- MODAL FOR UI UX -->
             <a-col :span="12">
                 <div class="pop-out-widget"> 
-                    <div style="background: linear-gradient(90deg, rgba(9,44,76,1) 0%, rgba(70,129,137,1) 100%);
+                    <div style="background: linear-gradient(90deg, rgba(255,174,103,1) 0%, rgba(255,87,0,1) 150%);
                                 height: 100px;
                                 border-radius: 15px 15px 0px 0px;">
                     </div>
@@ -462,8 +462,7 @@
     .social-icon-widget {
         display: inline-grid;
         border-radius: 15px;
-        background-color: white;
-        height: auto;
+        background: linear-gradient(180deg, rgb(255, 201, 155) 0%, rgb(255, 126, 61) 190%);        height: auto;
         width: auto;
         padding: 15px 15px;
         margin-right: 20px;
@@ -472,7 +471,7 @@
     }
 
     .social-icon  {
-        background-color: #E8E8E9;
+        background-color: #ffffff;
         height: auto;
         padding: 10px;
         border-radius: 10px;
