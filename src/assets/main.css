@@ -118,7 +118,7 @@ input {  font-family: 'Inter' !important; }
 /* Homepage button ---------------------------------------------------------------*/
 
 .pink-button-home {
-  font-family: 'DM Sans';
+  font-family: 'Mulish';
   font-size: 18px;
   font-weight: 500;
   height: 65px;
@@ -129,16 +129,16 @@ input {  font-family: 'Inter' !important; }
   letter-spacing: 1px;
 
   color: white;
-  background: linear-gradient(90deg, #F3994B, transparent) #F3994B;
+  background: linear-gradient(90deg, rgb(255, 167, 90) 0%, rgb(255, 101, 24) 150%);
   box-shadow: 0px 12px 38px -10px rgba(255, 170, 0, 0.65);
   transition: background-color .3s;
 }
 
-.pink-button-home:hover {  background-color: #FA438B;}
+.pink-button-home:hover {  background: #FA438B;}
 
 
 .no-line-button {
-  font-family: 'DM Sans';
+  font-family: 'Mulish';
   font-size: 18px;
   font-weight: 600;
   height: 65px;
