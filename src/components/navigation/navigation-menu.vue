@@ -38,7 +38,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 100vw;
+  width: 100%;
 }
 
 

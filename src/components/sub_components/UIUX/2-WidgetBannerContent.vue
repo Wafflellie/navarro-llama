@@ -9,7 +9,7 @@
                   Embarked on a UI UX endeavor with the objective of designing an interface that would offer a smooth and user-friendly experience. </h4>
     
     
-                <button class="primary-button pink-button" style="box-shadow: 0px 12px 38px -14px rgba(255, 170, 0, 0.65);"> Explore my works </button>
+                <button class="orange-button" style="margin-top: 30px;"> Explore my works </button>
 
 </template>
 

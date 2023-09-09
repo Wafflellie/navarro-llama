@@ -4,7 +4,7 @@
 /* FONT FAMILIY IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 a,
 .green {
@@ -13,6 +13,31 @@ a,
   transition: 0.4s;
 }
 
+
+/* FLEX DESIGN CLASS and MARGINS-------------------------------------------------- */
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.t-margin-20px {
+  margin-top: -20px;
+}
+
+.t-margin-30 {
+  margin-top: 30px;
+}
+
+.t-margin-40 {
+  margin-top: 40px;
+}
+
+.r-margin-10 {
+  margin-right: 10px;
+}
 
 /* STANDARD BUTTON ------------------------------------------------------*/
 button {
@@ -23,15 +48,16 @@ button {
 input {  font-family: 'Inter' !important; }
 
 
+/* USED IN THE BANNER SKILL PAGES */
 .headlinetext {
-  font-family: 'Mulish';
+  font-family: 'Inter';
   font-size: 45px;
-  font-weight: 900;
+  font-weight: 800;
   color: #092C4C;
 }
 
 .sublinetext {
-  font-family: 'Mulish';
+  font-family: 'Inter';
   font-size: 20px;
   font-weight: 400;
   color: #515151;
@@ -39,23 +65,62 @@ input {  font-family: 'Inter' !important; }
 
 }
 
-.sectionheader {
-  width: 750px;
-  font-family: 'Inter';
-  font-size: 35px;
-  font-weight: 700;
-  line-height: normal;
-  text-align: center;
-  color: #092c4c;
-}
-
+/* SECTIONS TEXT USED */
 .minisectionheader {
   text-transform: uppercase;
   font-size: 20px;
   font-family: 'Inter';
   letter-spacing: 3px;
+  color: #f49a4c;
+  margin-bottom: 10px;
 }
 
+.minisectionheader-98 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: 'Inter';
+  letter-spacing: 3px;
+  color: #989898;
+  margin-bottom: 10px;
+}
+
+.minisectionheader-white {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: 'Inter';
+  letter-spacing: 3px;
+  color: #ffffffd0;
+  margin-bottom: 10px;
+}
+
+.sectionheader {
+  width: 750px;
+  font-family: 'Inter';
+  font-size: 35px;
+  font-weight: 800;
+  line-height: normal;
+  text-align: left;
+  color: #515151;
+}
+
+.sectionheader-white {
+  width: auto;
+  font-family: 'Inter';
+  font-size: 35px;
+  font-weight: 800;
+  line-height: normal;
+  text-align: left;
+  color: #fffffff5;
+}
+
+.content-98 {
+  font-size: 16px;
+  color: #515151;
+  text-align: left;
+  margin-top: 25px;
+}
+
+/* SKILLSET ITEMS FONT SETTING USED */
 
 /* STANDARD BUTTON -----------------------------------------------------------*/
 
@@ -81,10 +146,8 @@ input {  font-family: 'Inter' !important; }
 
 .primary-button
 {
-  font-family: 'Mulish';
+  font-family: 'Inter';
   font-size: 17px;
-
-  margin-top: 30px;
   width: auto;
   height: 54px;
   padding: 0 30px;
@@ -106,39 +169,56 @@ input {  font-family: 'Inter' !important; }
 .blue-button:hover{  background-color: #092c4c; }
 
 
-.pink-button {
+.orange-button {
+  font-family: 'Inter';
+  font-size: 17px;
+  width: auto;
+  height: 54px;
+  padding: 0 30px;
+  border-radius: 50px;
+  border: none;
+  letter-spacing: 1px;
+  box-shadow: 0px 12px 38px -14px rgba(255, 170, 0, 0.65);
+
   color: white;
-  background: linear-gradient(90deg, #F3994B, transparent) #F3994B;
+  background: linear-gradient(90deg, #FF8D29, transparent) #FF8D29;
   transition: background-color .3s;
 }
 
-.pink-button:hover {  background-color: #FA438B;}
+.orange-button:hover, .orange-button:focus {  background-color: #FA438B;}
+
+/* LINK BUTTON------------------------------------------- */
+
+
+.arrow-icon {
+  margin-left: 15px;
+}
 
 
 /* Homepage button ---------------------------------------------------------------*/
 
-.pink-button-home {
-  font-family: 'Mulish';
+.yellow-button-home {
+  font-family: 'Inter';
   font-size: 18px;
   font-weight: 500;
   height: 65px;
-  width: auto;
+  width: fit-content;
   padding: 0px 40px;
   border-radius: 50px;
   border: none;
   letter-spacing: 1px;
 
   color: white;
-  background: linear-gradient(90deg, rgb(255, 167, 90) 0%, rgb(255, 101, 24) 150%);
-  box-shadow: 0px 12px 38px -10px rgba(255, 170, 0, 0.65);
-  transition: background-color .3s;
+  background: linear-gradient(90deg, #FFA83E, transparent) #FFC03E;  
+  box-shadow: 0px 12px 38px -10px #ffaa00a6;
+  transition: background-color .4s;
 }
 
-.pink-button-home:hover {  background: #FA438B;}
+.yellow-button-home:hover, .yellow-button:focus {  background-color: #FA438B;}
 
 
 .no-line-button {
-  font-family: 'Mulish';
+  font-family: 'Inter';
   font-size: 18px;
   font-weight: 600;
   height: 65px;
@@ -158,6 +238,25 @@ input {  font-family: 'Inter' !important; }
 .no-line-button:hover {
   border: 2px solid #ffae67;
 }
+
+
+.yellow-button {
+  font-family: 'Inter';
+  font-size: 17px;
+  font-weight: 500;
+  height: 54px;
+  width: fit-content;
+  padding: 0px 40px;
+  border-radius: 50px;
+  border: none;
+  letter-spacing: 1px;
+
+  color: white;
+  background: linear-gradient(90deg, #FFA83E, transparent) #FFC03E;  
+  transition: background-color .4s;
+}
+
+.yellow-button:hover, .yellow-button:focus {  background-color: #FA438B;}
 
 /* STANDARD TEXT ------------------------------------------------*/
 p {  font-family: 'Inter'; line-height: initial; }
@@ -179,7 +278,9 @@ span {  font-family: 'Inter'; line-height: initial; }
 .f-51 { color: #515151;}
 .f-24 { color: #242424;}
 .f-d9 { color: #d9d9d9;}
-.f-orange {color: #F49A4C;}
+.f-white { color: #ffffff;}
+.f-orange {color: #FF6518;}
+.f-pink { color: #FA438B;}
 
 /* ANT DESIGN */
 .ant-menu-title-content {
@@ -187,5 +288,61 @@ span {  font-family: 'Inter'; line-height: initial; }
 }
 
 
-/* FONT FAMILY  */
-  dm-sans {    font-family: 'DM Sans'; }
+
+/* TITLE GRADIENT COLOR */
+.title-green {
+  background: linear-gradient(90deg, #345e00 0%, #adc95f 150%);
+}
+
+.title-blue {
+  background: linear-gradient(90deg, #0063F8 0%, #00B2FF 100%);
+}
+
+.title-orange {
+  background: linear-gradient(90deg, #ff7300 0%, rgb(255, 53, 17) 100%);
+}
+
+.b-masking {
+  font-family: 'Inter';
+  font-size: 18px; 
+  font-weight: 500;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.f-masking {
+  text-transform: uppercase; 
+  font-size: 32px; 
+  font-weight: 800;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* CONTAINERS----------------------------------*/
+
+.web-container {
+  padding: 170px 0px;
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Maximum width to maintain readability on larger screens */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.web-container-0 {
+  width: 100%;
+}
+
+
+/* SHAPES ----------------------------------*/
+.line-bar {
+  margin-right: 30px;
+  width: 40px;
+  height: 150px;
+  border-radius: 50px;
+  background-color: #d9d9d9;
+}
+
+
+
+
+/* MARGINS ------------------------------------------*/

@@ -359,14 +359,14 @@
         margin-top: 30px;
         background-color: white;
         border-radius: 15px;
-        box-shadow: 0 0px 40px 0 rgba(0,0,0,0.1);
+        box-shadow: 0 0px 40px 0 #3157a333;
     }
 
 /* STEPPER WIDGET */
     .stepper-widget {
         border-radius: 15px;
         background-color: white;
-        box-shadow: 0 0px 40px 0 rgba(0,0,0,0.1);
+        box-shadow: 0 0px 40px 0 #3157a333;
         padding: 25px;
     }
 
@@ -466,7 +466,7 @@
         width: auto;
         padding: 15px 15px;
         margin-right: 20px;
-        box-shadow: 0 0px 40px 0 rgba(0,0,0,0.1);
+        box-shadow: 0 0px 40px 0 #3157a333;
 
     }
 
@@ -517,7 +517,7 @@
             .skill-toggle-widget {
             background-color: white;
             border-radius: 20px;
-            box-shadow: 0 0px 40px 0 rgba(0,0,0,0.1);
+            box-shadow: 0 0px 40px 0 #3157a333;
 
     
             height: auto;
@@ -572,7 +572,7 @@
             }
     
             .copy-button:hover {
-                box-shadow: 0 8px 10px 0 rgba(0,0,0,0.1);
+                box-shadow: 0 0px 40px 0 #3157a333;
             }
     
 /* CSS FOR POP UP MODAL */
@@ -583,7 +583,7 @@
         background-color: white;
         border-radius: 20px;
         font-family: 'Mulish';
-        box-shadow: 0 0px 40px 0 rgba(0,0,0,0.1);
+        box-shadow: 0 0px 40px 0 #3157a333;
 
     }
     
